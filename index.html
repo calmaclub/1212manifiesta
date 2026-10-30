@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="12/12 Suelta y Manifiesta. Un día para conectar con el cuerpo, el alma y la mente. Calma Club × Lannark, Bogotá.">
+<meta property="og:title" content="12/12 Suelta y Manifiesta">
+<meta property="og:description" content="El futuro se construye en comunidad. Súmate como lugar o marca aliada.">
+<meta property="og:image" content="media/silent-dance.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%23F4D23C'/></svg>">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>12/12 Suelta y Manifiesta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<style>
+/* Layout: soft blush "glass" pages; serif italics over video; butter-yellow pills as the only highlight. Single committed light look. 12/12 portal edition. */
+:root{
+  --blush:#FCEAF0;
+  --petal:#F7CADA;
+  --rose:#E4639A;
+  --wine:#6B1D44;
+  --wine-soft:#8E4467;
+  --butter:#FCEB8F;
+  --sun:#F4D23C;
+  --white:#FFF8FA;
+  --display:"Instrument Serif", "Times New Roman", Georgia, serif;
+  --body:"DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--blush);color:var(--wine);font-family:var(--body);font-size:16px;line-height:1.55;overflow-x:hidden}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;text-wrap:balance;margin:0}
+h2{font-size:clamp(2.4rem,6vw,4rem)}
+h3{font-size:1.9rem}
+p{margin:0}
+em{font-style:italic}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+section{padding-block:clamp(56px,9vw,104px)}
+.eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--rose)}
+.lead{font-size:1.125rem;max-width:34em;color:var(--wine-soft)}
+.pill{display:inline-flex;align-items:center;gap:.4em;background:var(--butter);color:var(--wine);border-radius:999px;padding:.35em .95em;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;border:0;border-radius:999px;padding:1em 1.6em;font:700 1rem var(--body);cursor:pointer;text-decoration:none;transition:transform .2s, background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.choice:focus-visible,.back:focus-visible,.sound:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.btn-sun{background:var(--sun);color:var(--wine)}
+.btn-glass{background:rgba(255,248,250,.78);color:var(--wine);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.btn-rose{background:var(--rose);color:var(--white)}
+
+/* nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(252,234,240,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--petal)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--blush)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{font-family:var(--display);font-size:1.35rem;font-style:italic;text-decoration:none;white-space:nowrap}
+.top nav{display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-size:.85rem;font-weight:500;padding:.45em .9em;border-radius:999px}
+.top nav a[aria-current="page"]{background:var(--butter)}
+
+/* hero */
+.hero{position:relative;padding:0;background:var(--wine);overflow:hidden}
+.hero video{display:block;width:100%;height:clamp(460px,72vh,720px);object-fit:cover;filter:saturate(1.05)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(107,29,68,.05) 30%,rgba(107,29,68,.72) 100%);pointer-events:none}
+.hero-copy{position:absolute;left:0;right:0;bottom:0;z-index:2;padding-block:clamp(28px,6vw,64px)}
+.hero h1{color:var(--white);font-size:clamp(3.2rem,11vw,8.5rem);font-style:italic;max-width:10em}
+.hero h1 span{font-style:normal}
+.hero p{color:var(--white);font-size:1.15rem;margin-top:14px;max-width:30em}
+.hero .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.sound{position:absolute;z-index:3;top:16px;right:max(16px,env(safe-area-inset-right,0px));border:0;border-radius:999px;padding:.55em 1em;font:700 .8rem var(--body);background:rgba(255,248,250,.82);color:var(--wine);cursor:pointer}
+
+/* chips row */
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.facts .pill{background:var(--white);border:1px solid var(--petal)}
+
+/* experience steps — real order of the day */
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--white);border-radius:22px;padding:22px 18px 24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.steps li::before{content:counter(s);font-family:var(--display);font-style:italic;font-size:2.6rem;line-height:1;color:var(--rose)}
+.steps b{font-family:var(--display);font-weight:400;font-size:1.45rem;line-height:1.1}
+.steps span{font-size:.92rem;color:var(--wine-soft)}
+.steps li:nth-child(4){background:var(--butter)}
+
+/* story with vertical video */
+.story{background:var(--petal)}
+.story .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,6vw,80px);align-items:center}
+.phone{justify-self:center;width:min(100%,330px);aspect-ratio:9/16;max-width:100%;border-radius:34px;overflow:hidden;border:8px solid var(--white);box-shadow:0 30px 60px -30px rgba(107,29,68,.55);transform:rotate(-2deg);background:var(--wine)}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.story .copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.story h2 em{color:var(--rose)}
+.ticks{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:10px}
+.ticks li{display:flex;gap:10px;align-items:baseline}
+.ticks li::before{content:"✦";color:var(--rose);font-size:.9rem}
+
+/* creators */
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:40px}
+.person{background:var(--white);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.person img{width:100%;aspect-ratio:4/3.4;object-fit:cover;display:block}
+.person.val img{object-position:50% 48%}
+.person .txt{padding:22px 24px 28px;display:flex;flex-direction:column;gap:8px}
+.person .role{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rose)}
+.person p{color:var(--wine-soft)}
+
+/* audience band */
+.band{background:var(--butter)}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px}
+.band .big{font-family:var(--display);font-size:clamp(5rem,16vw,11rem);line-height:.85;font-style:italic;color:var(--rose)}
+.band .copy{max-width:30em;display:grid;gap:10px}
+
+/* chooser */
+.chooser{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:36px}
+.choice{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;min-height:280px;padding:28px;border-radius:30px;text-decoration:none;overflow:hidden;transition:transform .25s}
+.choice:hover{transform:translateY(-4px)}
+.choice h3{font-size:clamp(2.4rem,5vw,3.4rem);font-style:italic}
+.choice .go{font-weight:700;display:inline-flex;gap:.4em;align-items:center}
+.choice.lugar{background:var(--rose);color:var(--white)}
+.choice.marca{background:var(--sun);color:var(--wine)}
+.choice .glyph{position:absolute;top:22px;right:24px;font-family:var(--display);font-size:5rem;line-height:1;opacity:.35}
+
+/* sub pages */
+.subhero{padding-block:clamp(48px,8vw,96px) clamp(32px,5vw,56px)}
+.subhero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.subhero h1{font-size:clamp(3rem,8vw,6rem);font-style:italic}
+.subhero .copy{display:flex;flex-direction:column;align-items:flex-start;gap:18px;min-width:0}
+.back{align-self:flex-start;background:none;border:0;padding:0;font:500 .9rem var(--body);color:var(--wine-soft);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.framed{border-radius:30px;overflow:hidden;border:8px solid var(--white);transform:rotate(1.5deg);box-shadow:0 30px 60px -32px rgba(107,29,68,.5);max-width:100%}
+.framed img,.framed video{display:block;width:100%;aspect-ratio:4/3.2;object-fit:cover}
+
+.grid-ben{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.ben{background:var(--white);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.ben b{font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1.1}
+.ben span{color:var(--wine-soft);font-size:.95rem}
+
+.needs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:28px;border-top:1px solid var(--rose)}
+.needs div{padding:18px 18px 18px 0;border-bottom:1px solid var(--petal);display:grid;gap:4px;min-width:0}
+.needs dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--rose)}
+.needs dd{margin:0;font-size:1.02rem}
+
+.offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.offers.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.offer{border-radius:28px;padding:30px 28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.offer.a{background:var(--rose);color:var(--white)}
+.offer.b{background:var(--white);border:2px solid var(--petal)}
+.offer.c{background:var(--butter)}
+.offer h3{font-style:italic}
+.offer .tag{align-self:flex-start}
+.offer.a .tag{background:var(--sun)}
+.offer ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.offer li{display:flex;gap:10px;align-items:baseline}
+.offer li::before{content:"✦";font-size:.8rem}
+.offer .note{font-size:.88rem;opacity:.85}
+.money{font-family:var(--display);font-size:2.4rem;line-height:1}
+
+/* contact */
+.contact{background:var(--wine);color:var(--white)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:end}
+.contact h2{color:var(--white);font-style:italic}
+.contact h2 span{color:var(--butter);font-style:normal}
+.contact p{color:var(--petal);margin-top:12px}
+.links{display:grid;gap:10px}
+.link{display:flex;justify-content:space-between;align-items:center;gap:12px;background:rgba(255,248,250,.08);border:1px solid rgba(247,202,218,.35);border-radius:18px;padding:14px 18px;color:var(--white);text-decoration:none;min-width:0}
+.link small{display:block;color:var(--petal);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+.link strong{font-weight:500;word-break:break-word}
+.copybtn{border:0;background:var(--butter);color:var(--wine);font:700 .8rem var(--body);border-radius:999px;padding:.5em .9em;cursor:pointer;flex:none}
+footer{background:var(--wine);color:var(--petal);font-size:.85rem;padding-block:0 32px}
+footer .wrap{border-top:1px solid rgba(247,202,218,.25);padding-top:20px}
+
+[data-view]{display:none}
+[data-view].on{display:block}
+
+@media (max-width:900px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps li:last-child{grid-column:1/-1}
+  .grid-ben,.offers.three{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .needs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:680px){
+  .story .wrap,.subhero .wrap,.contact .wrap,.duo,.chooser,.offers,.offers.three,.grid-ben{grid-template-columns:minmax(0,1fr)}
+  .needs{grid-template-columns:minmax(0,1fr)}
+  .phone{width:min(100%,270px)}
+  .choice{min-height:200px}
+  .top nav a.hide-sm,.brand .hide-sm{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.phone,.framed{transform:none}}
+
+/* 12/12 additions */
+.hero h1{font-style:normal;max-width:none}
+.hero .num{display:block;font-size:clamp(5rem,20vw,13rem);line-height:.82;letter-spacing:-.02em;color:var(--butter)}
+.hero .sub{display:block;font-style:italic;font-size:clamp(2.4rem,7vw,5rem)}
+.manifesto{background:var(--white);text-align:left}
+.manifesto h2{font-size:clamp(2.6rem,9vw,7.5rem);line-height:.95;max-width:11em}
+.manifesto h2 strong{font-family:var(--body);font-weight:700;font-style:normal;letter-spacing:.02em;color:var(--rose);display:inline-block;background:var(--butter);padding:0 .18em;border-radius:.14em;font-size:.82em}
+.manifesto p{margin-top:22px}
+.acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:36px}
+.act{border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.act:nth-child(1){background:var(--petal)}
+.act:nth-child(2){background:var(--butter)}
+.act:nth-child(3){background:var(--rose);color:var(--white)}
+.act b{font-family:var(--display);font-weight:400;font-style:italic;font-size:2.2rem;line-height:1}
+.steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+.steps li::before{content:none}
+.steps time{font-family:var(--display);font-style:italic;font-size:2.2rem;line-height:1;color:var(--rose);font-variant-numeric:tabular-nums}
+.steps li:nth-child(4){background:var(--white)}
+.steps li.hi{background:var(--butter)}
+.kit{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.kit .pill{background:var(--white);border:1px solid var(--petal);text-transform:none;letter-spacing:0;font-weight:500;font-size:.9rem}
+.community .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,6vw,72px);align-items:center}
+.phones{position:relative;display:flex;justify-content:center;align-items:flex-start;gap:0;min-width:0;padding-block:12px}
+.shot{width:min(46%,250px);aspect-ratio:736/1480;border-radius:30px;overflow:hidden;border:7px solid var(--wine);background:var(--white);box-shadow:0 30px 60px -28px rgba(107,29,68,.55);flex:none}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.shot.ig{transform:rotate(-4deg);z-index:2;margin-right:-18px}
+.shot.wa{transform:rotate(3deg) translateY(28px)}
+.stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:6px}
+.stat b{display:block;font-family:var(--display);font-size:3.6rem;line-height:1;color:var(--rose)}
+.stat span{font-size:.9rem;color:var(--wine-soft)}
+.cocrea{background:var(--rose);color:var(--white);border-radius:32px;padding:clamp(28px,5vw,48px);display:grid;gap:16px}
+.cocrea h2{color:var(--white);font-style:italic;font-size:clamp(2.2rem,5.5vw,3.6rem)}
+.cocrea p{max-width:40em;font-size:1.08rem}
+.cocrea .pill{align-self:flex-start;justify-self:start}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps li:last-child{grid-column:auto}}
+@media (max-width:680px){.acts,.community .wrap,.steps{grid-template-columns:minmax(0,1fr)}.shot{width:min(48%,200px)}}
+@media (prefers-reduced-motion:reduce){.shot{transform:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">12/12<span class="hide-sm"> Suelta y Manifiesta</span></a>
+    <nav aria-label="Secciones">
+      <a href="#inicio" class="hide-sm" data-nav="inicio">Inicio</a>
+      <a href="#lugar" data-nav="lugar">Soy un lugar</a>
+      <a href="#marca" data-nav="marca">Soy una marca</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ INICIO ============ -->
+<div data-view="inicio" class="on">
+  <section class="hero" aria-label="Video del Ecstatic Dance">
+    <video id="heroVid" src="media/silent-dance.mp4" poster="media/silent-dance.jpg" autoplay muted loop playsinline></video>
+    <button class="sound" id="soundBtn" type="button" aria-pressed="false">♪ Activar sonido</button>
+    <div class="hero-copy">
+      <div class="wrap">
+        <span class="pill">Sábado 12 de diciembre · Bogotá</span>
+        <h1 style="margin-top:16px"><span class="num">12/12</span><span class="sub">Suelta y manifiesta</span></h1>
+        <p>Un día para conectar con el cuerpo, el alma y la mente.</p>
+        <div class="actions">
+          <a class="btn btn-sun" href="#lugar">Soy un lugar</a>
+          <a class="btn btn-glass" href="#marca">Soy una marca</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <div class="wrap">
+      <p class="eyebrow">Calma Club × Lannark</p>
+      <h2 style="margin-top:14px">El futuro se construye en <strong>COMUNIDAD</strong></h2>
+      <p class="lead">Cerramos el año juntas, en el portal 12/12: el número de la madurez y el crecimiento interior. Un día para soltar lo que fue y escribir lo que viene.</p>
+      <div class="acts">
+        <div class="act"><b>Suelta</b><span>Lo que pesa y ya no va contigo.</span></div>
+        <div class="act"><b>Agradece</b><span>Todo lo que este año te dio.</span></div>
+        <div class="act"><b>Manifiesta</b><span>El 2027 que quieres vivir.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">La experiencia</p>
+      <h2 style="margin-top:10px">Abrimos el portal <em>a las 12:12</em></h2>
+      <div class="facts">
+        <span class="pill">50 mujeres</span><span class="pill">Bogotá</span><span class="pill">Sin alcohol</span><span class="pill">Audífonos silenciosos</span>
+      </div>
+      <ol class="steps">
+        <li><time>12:12</time><b>Apertura del portal</b><span>Tres respiraciones y encendemos las velas.</span></li>
+        <li><time>12:25</time><b>Yoga de apertura</b><span>Soltamos caderas, pecho y hombros.</span></li>
+        <li><time>1:05</time><b>Regular el sistema nervioso</b><span>Herramientas que te llevas a casa.</span></li>
+        <li class="hi"><time>1:30</time><b>Ritual de las 3 cartas + brunch</b><span>Círculo de mujeres: suelta, agradece y manifiesta.</span></li>
+        <li><time>2:30</time><b>Ecstatic Dance</b><span>Celebramos lo que viene con DJ Ser Latina Sonora.</span></li>
+        <li><time>3:30</time><b>Sello y cierre</b><span>Sello de canela y cerramos el portal juntas.</span></li>
+      </ol>
+      <div class="kit" aria-label="Kit del ritual">
+        <span class="pill">Kit del ritual:</span><span class="pill">Libreta nueva</span><span class="pill">Bolígrafo verde</span><span class="pill">Vela blanca</span><span class="pill">Canela</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <div class="phone"><video id="storyVid" src="media/calma.mp4" poster="media/calma.jpg" autoplay muted loop playsinline aria-label="Video de la comunidad Calma Club"></video></div>
+      <div class="copy">
+        <p class="eyebrow">Comenzó como un sueño</p>
+        <h2>Un club de <em>amigas</em> en Bogotá</h2>
+        <p class="lead">Calma Club reúne mujeres para crecer, aprender y disfrutar la vida. Este día es nuestra forma de cerrar el año en grande.</p>
+        <ul class="ticks">
+          <li>Comunidad real, que vuelve a cada encuentro</li>
+          <li>Yoga, naturaleza, talleres y experiencias</li>
+          <li>Mujeres que cuidan su cuerpo y su mente</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="community">
+    <div class="wrap">
+      <div class="copy" style="display:flex;flex-direction:column;gap:18px;min-width:0">
+        <p class="eyebrow">Calma Club</p>
+        <h2>Una comunidad <em>que se habla todos los días</em></h2>
+        <p class="lead">En Instagram compartimos las experiencias. En WhatsApp nos organizamos, nos apoyamos y nos encontramos.</p>
+        <div class="stats">
+          <div class="stat"><b>142</b><span>mujeres en la comunidad de WhatsApp</span></div>
+          <div class="stat"><b>31</b><span>publicaciones de encuentros reales</span></div>
+        </div>
+        <a class="btn btn-rose" style="align-self:flex-start" href="https://www.instagram.com/calmaclubco/" target="_blank" rel="noopener">Ver @calmaclubco ↗</a>
+      </div>
+      <div class="phones">
+        <div class="shot ig"><img src="media/ig.jpg" alt="Perfil de Instagram de Calma Club, amigas en Bogotá"></div>
+        <div class="shot wa"><img src="media/whatsapp.jpg" alt="Comunidad de WhatsApp Club de amigas en Bogotá Calma, con 142 miembros"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Quiénes lo crean</p>
+      <h2 style="margin-top:10px">Dos mujeres, <em>un mismo propósito</em></h2>
+      <div class="duo">
+        <article class="person val">
+          <img src="media/val.jpg" alt="Val Gómez con corona de flores en un encuentro de Calma Club">
+          <div class="txt">
+            <span class="role">Calma Club</span>
+            <h3>Val Gómez</h3>
+            <p>Guía el yoga, la respiración y el ritual del círculo de mujeres.</p>
+          </div>
+        </article>
+        <article class="person">
+          <img src="media/lady.jpg" alt="Lady Cárdenas como DJ Ser Latina Sonora, con audífonos en una terraza de Bogotá">
+          <div class="txt">
+            <span class="role">Lannark</span>
+            <h3>Lady Cárdenas</h3>
+            <p>DJ Ser Latina Sonora. Crea espacios de bienestar desde la música, la danza y el cuerpo.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="big">50</div>
+      <div class="copy">
+        <p class="eyebrow" style="color:var(--wine)">A quién reunimos</p>
+        <h3>Mujeres que invierten en su bienestar</h3>
+        <p>Clientas reales, no solo seguidoras. Pagan por vivir experiencias de calidad y las recomiendan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sumate">
+    <div class="wrap">
+      <p class="eyebrow">Súmate</p>
+      <h2 style="margin-top:10px">¿Cómo quieres <em>ser parte?</em></h2>
+      <div class="chooser">
+        <a class="choice lugar" href="#lugar"><span class="glyph" aria-hidden="true">✿</span><h3>Soy un lugar</h3><p>Cocrea con nosotras un espacio consciente.</p><span class="go">Ver propuesta →</span></a>
+        <a class="choice marca" href="#marca"><span class="glyph" aria-hidden="true">✦</span><h3>Soy una marca</h3><p>Sé parte del ritual de 50 mujeres.</p><span class="go">Ver propuesta →</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ LUGAR ============ -->
+<div data-view="lugar">
+  <section class="subhero">
+    <div class="wrap">
+      <div class="copy">
+        <a class="back" href="#inicio">← Volver</a>
+        <span class="pill">Para lugares</span>
+        <h1>Sé el hogar del portal 12/12</h1>
+        <p class="lead">Buscamos un espacio natural donde 50 mujeres puedan soltar, agradecer y manifestar juntas.</p>
+      </div>
+      <div class="framed"><img src="media/parque.jpg" style="object-position:50% 62%" alt="Mujeres de Calma Club haciendo yoga en un parque de Bogotá"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cocrea">
+        <span class="pill">Por qué sumarte</span>
+        <h2>Cocreemos espacios conscientes</h2>
+        <p>El futuro se construye en comunidad. Cuando tu lugar abre sus puertas a un encuentro así, deja de ser solo un espacio: se vuelve un punto de encuentro para la calma, el cuidado y los vínculos reales.</p>
+        <p>Te invitamos a cocrear con nosotras experiencias que hacen bien a las personas y a la ciudad. Y a que tu espacio sea parte de esa historia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Lo que gana tu espacio</p>
+      <div class="grid-ben">
+        <div class="ben"><b>Comunidad que vuelve</b><span>50 mujeres que te conocen en un momento especial y regresan.</span></div>
+        <div class="ben"><b>Un refugio de calma</b><span>Tu lugar asociado al bienestar y al cierre consciente del año.</span></div>
+        <div class="ben"><b>Propósito compartido</b><span>Tu marca ligada a construir comunidad, no a un evento más.</span></div>
+        <div class="ben"><b>Visibilidad con sentido</b><span>Etiqueta y menciones en Calma Club y Lannark.</span></div>
+        <div class="ben"><b>Fotos y video</b><span>Contenido profesional de tu espacio lleno de vida.</span></div>
+        <div class="ben"><b>Bajo impacto</b><span>Sin alcohol y sin ruido: bailamos con audífonos.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Lo que necesitamos</p>
+      <dl class="needs">
+        <div><dt>Fecha</dt><dd>Sábado 12 de diciembre</dd></div>
+        <div><dt>Espacio</dt><dd>150 a 200 m² planos</dd></div>
+        <div><dt>Personas</dt><dd>50 mujeres + equipo</dd></div>
+        <div><dt>Tiempo</dt><dd>11:30 a 4:00 p. m. + montaje</dd></div>
+        <div><dt>Plan B</dt><dd>Zona cubierta si llueve</dd></div>
+        <div><dt>Servicios</dt><dd>Baños, agua y corriente</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Dos formas de trabajar</p>
+      <div class="offers">
+        <article class="offer a">
+          <span class="pill tag">Recomendada</span>
+          <h3>Lugar aliado</h3>
+          <p>Prestas el espacio y cocreamos juntas.</p>
+          <ul>
+            <li>10% de las ventas de entradas</li>
+            <li>Logo y etiqueta en la difusión</li>
+            <li>Menciones en redes y en vivo</li>
+            <li>Fotos y video para tus canales</li>
+          </ul>
+          <p class="note">Con las 50 entradas vendidas, tu 10% es cerca de $1.110.000 COP.</p>
+        </article>
+        <article class="offer b">
+          <span class="pill tag">Directa</span>
+          <h3>Alquiler por jornada</h3>
+          <p>Tarifa fija por el día. Simple y sin compromisos.</p>
+          <ul>
+            <li>Pago fijo acordado</li>
+            <li>Sin publicidad</li>
+            <li>Sin participación en el evento</li>
+          </ul>
+          <p class="note">Envíanos tu tarifa y tu disponibilidad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ MARCA ============ -->
+<div data-view="marca">
+  <section class="subhero">
+    <div class="wrap">
+      <div class="copy">
+        <a class="back" href="#inicio">← Volver</a>
+        <span class="pill">Para marcas</span>
+        <h1>Tu marca en el portal 12/12</h1>
+        <p class="lead">Llega a 50 mujeres en su momento más abierto: cuando sueltan, agradecen y escriben lo que quieren para 2027.</p>
+      </div>
+      <div class="framed"><img src="media/calma.jpg" style="object-position:50% 85%" alt="Encuentro de Calma Club alrededor de una mesa con materiales creativos"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Por qué aliarte</p>
+      <div class="grid-ben">
+        <div class="ben"><b>Tu cliente ideal</b><span>Mujeres que invierten en su bienestar.</span></div>
+        <div class="ben"><b>Parte del ritual</b><span>Tu producto en su kit, no en un anuncio.</span></div>
+        <div class="ben"><b>Bienestar con sentido</b><span>Tu marca ligada a un cierre de año que recuerdan.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Lo que te ofrecemos</p>
+      <div class="offers three">
+        <article class="offer a">
+          <h3>Presencia de marca</h3>
+          <ul>
+            <li>Logo en las piezas de difusión</li>
+            <li>Menciones en redes y en vivo</li>
+            <li>Fotos y video para tus canales</li>
+          </ul>
+        </article>
+        <article class="offer c">
+          <h3>Muestras gratis</h3>
+          <ul>
+            <li>Tu producto en el kit del ritual</li>
+            <li>O en el brunch del círculo</li>
+          </ul>
+        </article>
+        <article class="offer b">
+          <h3>Venta de producto</h3>
+          <ul>
+            <li>Espacio para vender el día del evento</li>
+            <li>Contacto directo con 50 clientas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div>
+      <h2>Hablemos <span>✦</span></h2>
+      <p>Cuéntanos qué te gustaría aportar y cocreamos la alianza juntas.</p>
+    </div>
+    <div class="links">
+      <a class="link" href="https://www.instagram.com/calmaclubco/" target="_blank" rel="noopener"><span><small>Calma Club</small><strong>@calmaclubco</strong></span><span aria-hidden="true">↗</span></a>
+      <a class="link" href="https://www.instagram.com/lannark_lamas/" target="_blank" rel="noopener"><span><small>Lannark</small><strong>@lannark_lamas</strong></span><span aria-hidden="true">↗</span></a>
+      <div class="link"><span><small>Correo</small><strong id="mail">lannarkmusic@gmail.com</strong></span><button class="copybtn" type="button" data-copy="mail">Copiar</button></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">12/12 Suelta y Manifiesta · Calma Club × Lannark · Bogotá</div></footer>
+
+<script>
+(function(){
+  var views=["inicio","lugar","marca"];
+  function show(){
+    var h=(location.hash||"").replace("#","");
+    var v=views.indexOf(h)>-1?h:"inicio";
+    document.querySelectorAll("[data-view]").forEach(function(el){el.classList.toggle("on",el.getAttribute("data-view")===v)});
+    document.querySelectorAll("[data-nav]").forEach(function(a){
+      if(a.getAttribute("data-nav")===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+    });
+    var hero=document.getElementById("heroVid"),story=document.getElementById("storyVid");
+    if(v==="inicio"){try{hero.play()}catch(e){}try{story.play()}catch(e){}}
+    else{hero.pause();story.pause()}
+    if(views.indexOf(h)>-1||!h)window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange",show);
+  show();
+
+  var btn=document.getElementById("soundBtn"),hv=document.getElementById("heroVid");
+  btn.addEventListener("click",function(){
+    hv.muted=!hv.muted;
+    if(!hv.muted){hv.play().catch(function(){})}
+    btn.textContent=hv.muted?"♪ Activar sonido":"♪ Silenciar";
+    btn.setAttribute("aria-pressed",String(!hv.muted));
+  });
+
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var el=document.getElementById(b.getAttribute("data-copy")),t=el.textContent;
+      function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+      try{navigator.clipboard.writeText(t).then(function(){b.textContent="Copiado"},sel)}catch(e){sel()}
+    });
+  });
+})();
+</script>
+</body>
+</html>
